@@ -12,6 +12,55 @@
     <meta name="description" content="Academic homepage of Longfei Li. Research interests include homological mirror symmetry, Fukaya–Seidel categories, and algebra of the infrared.">
 
 
+
+/* About Me and Profile Photo */
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.profile-photo {
+    flex: 0 0 230px;
+    margin: 12px 0 0;
+    text-align: center;
+}
+
+.profile-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profile-photo figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #727b85;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profile-photo {
+        flex: none;
+        width: 220px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
 <style>
     :root {
         --primary: #294b65;
@@ -268,17 +317,36 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
 
-        <p>
-            I received my Ph.D. in Mathematics from
-            Kansas State University in 2026,
-            under the supervision of
-            Professor Yan Soibelman.
-        </p>
+<section id="about">
+    <h2>About Me</h2>
 
-    </section>
+    <div class="about-container">
+
+        <div class="about-text">
+            <p>
+                I received my Ph.D. in Mathematics from
+                Kansas State University in 2026,
+                under the supervision of Professor Yan Soibelman.
+            </p>
+
+            <p>
+                Before joining Kansas State University,
+                I obtained my M.Sc. and B.Sc. in Mathematics
+                both from Beijing Normal University.
+            </p>
+        </div>
+
+        <figure class="profile-photo">
+            <img src="photo.png" alt="Longfei Li giving a talk">
+            <figcaption>
+                QuaSy-Con IV, May 2026
+            </figcaption>
+        </figure>
+
+    </div>
+</section>
+
 
     
 
