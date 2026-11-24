@@ -11,56 +11,6 @@
 
     <meta name="description" content="Academic homepage of Longfei Li. Research interests include homological mirror symmetry, Fukaya–Seidel categories, and algebra of the infrared.">
 
-
-
-/* About Me and Profile Photo */
-
-.about-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 35px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.profile-photo {
-    flex: 0 0 230px;
-    margin: 12px 0 0;
-    text-align: center;
-}
-
-.profile-photo img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-}
-
-.profile-photo figcaption {
-    margin-top: 8px;
-    font-size: 12px;
-    color: #727b85;
-    font-style: italic;
-    line-height: 1.5;
-}
-
-@media (max-width: 600px) {
-    .about-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .profile-photo {
-        flex: none;
-        width: 220px;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-}
-
 <style>
     :root {
         --primary: #294b65;
@@ -172,6 +122,45 @@
 
     p {
         margin: 12px 0 18px;
+    }
+
+    /* About Me and Profile Photo */
+
+    .about-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .about-text {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .profile-photo {
+        flex: 0 0 230px;
+        width: 230px;
+        max-width: 100%;
+        margin: 12px 0 0;
+        text-align: center;
+    }
+
+    .profile-photo img {
+        display: block;
+        width: 100%;
+        max-width: 230px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 5px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .profile-photo figcaption {
+        margin-top: 8px;
+        font-size: 12px;
+        color: var(--muted);
+        font-style: italic;
+        line-height: 1.5;
     }
 
     /* Links */
@@ -295,6 +284,18 @@
 
         .paper-title {
             font-size: 17px;
+        }
+
+        .about-container {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .profile-photo {
+            flex: none;
+            width: 220px;
+            max-width: 100%;
+            margin: 0 auto;
         }
     }
 </style>
